@@ -19,15 +19,5 @@ def safe2(l: list) -> bool:
 with open("2.input") as f:
     reports = [list(map(int, line.strip().split())) for line in f]
 
-# Calculate the results
-count = 0
-for r in reports:
-    if safe1(r):
-        count += 1
-print(f"Safe reports 1: {count}")
-
-count = 0
-for r in reports:
-    if safe2(r):
-        count += 1
-print(f"Safe reports 2: {count}")
+print(f"Safe reports 1: {len([r for r in reports if safe1(r)])}")
+print(f"Safe reports 2: {len([r for r in reports if safe2(r)])}")
