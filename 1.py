@@ -8,7 +8,7 @@ distance = 0
 for (a, b) in zip(sorted(list1), sorted(list2)):
     distance += abs(int(b) - int(a))
 
-print(f"Distance:  {distance}")
+print(f"Distance:   {distance}")
 
 # counts = {}
 # for k, g in groupby(sorted(list2)):
